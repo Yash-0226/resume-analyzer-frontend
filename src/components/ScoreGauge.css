@@ -1,0 +1,47 @@
+.gauge-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.gauge-svg {
+  width: 140px;
+  height: 140px;
+}
+
+/* Animate the arc drawing in */
+.gauge-arc {
+  animation: drawArc 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes drawArc {
+  from { stroke-dashoffset: var(--circ); }
+  to   { stroke-dashoffset: var(--offset); }
+}
+
+.gauge-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.gauge-suffix {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px;
+}
+
+.gauge-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.gauge-grade {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

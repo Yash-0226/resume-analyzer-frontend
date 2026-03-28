@@ -1,0 +1,103 @@
+.results-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeUp 0.5s ease;
+}
+
+/* Reuse section-label from App.css pattern */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.label-num {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ── SCORES ROW ──────────────────────────────────────────────────────────── */
+.scores-row {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 40px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+@media (max-width: 720px) {
+  .scores-row {
+    flex-direction: column;
+    padding: 24px;
+    gap: 28px;
+  }
+}
+
+.scores-gauges {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+.score-divider {
+  width: 1px;
+  height: 80px;
+  background: var(--border-light);
+}
+
+/* Legend */
+.scores-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.legend-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.legend-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.legend-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── KEYWORDS ROW ────────────────────────────────────────────────────────── */
+.keywords-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 720px) {
+  .keywords-row { grid-template-columns: 1fr; }
+}

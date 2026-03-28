@@ -1,0 +1,79 @@
+.keyword-section {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.kw-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.kw-icon { font-size: 16px; }
+
+.kw-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.kw-count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+
+/* ── TAGS ────────────────────────────────────────────────────────────────── */
+.kw-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.15s;
+}
+
+.tag:hover { transform: translateY(-1px); }
+
+.tag-dot { font-size: 8px; }
+
+/* Matched — green */
+.tag-matched {
+  color: var(--accent);
+  border-color: rgba(0, 217, 163, 0.3);
+  background: var(--accent-dim);
+}
+
+/* Missing — red */
+.tag-missing {
+  color: var(--red);
+  border-color: rgba(255, 92, 92, 0.3);
+  background: var(--red-dim);
+}
+
+/* Skill — blue */
+.tag-skill {
+  color: var(--blue);
+  border-color: rgba(79, 140, 255, 0.3);
+  background: var(--blue-dim);
+}

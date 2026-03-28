@@ -1,0 +1,111 @@
+.analysis-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Summary bar */
+.analysis-summary {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+.summary-bar {
+  flex-shrink: 0;
+  width: 3px;
+  height: auto;
+  align-self: stretch;
+  background: linear-gradient(180deg, var(--accent), var(--blue));
+  border-radius: 99px;
+}
+
+/* Grid */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .analysis-grid { grid-template-columns: 1fr; }
+}
+
+/* Cards */
+.analysis-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.card-strength { border-top: 2px solid var(--accent); }
+.card-weakness { border-top: 2px solid var(--red); }
+.card-suggestion { border-top: 2px solid var(--blue); }
+
+.ac-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ac-icon { font-size: 14px; }
+
+.ac-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* List items */
+.ac-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ac-item {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.ac-bullet {
+  flex-shrink: 0;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.bullet-green { color: var(--accent); }
+.bullet-red   { color: var(--red); }
+
+.ac-num {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--blue-dim);
+  border: 1px solid rgba(79, 140, 255, 0.3);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--blue);
+  margin-top: 2px;
+}
